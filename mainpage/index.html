@@ -7,28 +7,65 @@
     <title>Navbar y Sidebar Sticky</title>
     <link rel="stylesheet" href="../Resources/bootstrap-5.3.0-alpha3-dist/css/bootstrap.min.css">
     <style>
+        /* Fuente */
         @font-face {
             font-family: 'Montserrat' ;
             src: url(../Fonts/Montserrat-Italic-VariableFont_wght.ttf);
         }
-        /* Fuente */
-        .navbar {
-    font-family: "Trebuchet MS", sans-serif;
-}
-        .custom-font {
-            font-family: 'Montserrat', Arial, sans-serif;
+        @font-face {
+            font-family: 'Jurasick' ;
+            src: url(../Fonts/Jurasick.ttf)
         }
+        body {
+        font-family: "Jurasick", sans-serif; /* Aquí puedes especificar la fuente deseada */
+    }
         /* Navbar */    
+        @media (max-width: 576px) {
+        .navbar {
+            font-size: 35px;
+            padding-top: 3px;
+            padding-bottom: 3px;
+        }
+    }
+    @media (min-width: 577px) and (max-width: 991px) {
+        .navbar {
+            font-size: 14px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+    }
+        .navbar-nav-container {
+        display: flex;
+        align-items: center;
+    }
+        .ml-auto {
+        margin-left: auto;
+    }
         .sticky-top {
             position: sticky;
             top: 0;
             z-index: 1020;
-            /* Asegura que el navbar siempre esté por encima del sidebar */
+        }
+        .bg-custom {
+            background: linear-gradient(to right, #59228d, #f8be73);
+    }
+        .navbar-nav .nav-link {
+            font-size: 20px; /* Aquí puedes ajustar el tamaño de fuente deseado */
+    }
+        .carousel-caption h5 {
+            font-size: 38px; /* Aquí puedes especificar el tamaño de fuente deseado */
+    }
+        h2 {
+            font-size: 40px;
+        }
+        h3 {
+            font-size: 30px;
+        }
+        /* Asegura que el navbar siempre esté por encima del sidebar */
         /* Navbar / Margenes */
-        .navbar-nav > li {
+        .navbar-nav {
         padding-left:10px;
         padding-right:10px;
-    }
         }
         /* Estilo para la imagen de perfil */
         .profile-image {
@@ -39,16 +76,20 @@
         }
         /* Margen de elementos <h2 y h3*/
         h2, h3 {
-        margin-bottom: 20px; 
-}
+        margin-bottom: 25px; 
+    }
         /* Underlined para una linea de texto*/
         .underlined {
             text-decoration: underline; 
         }
+        h3 {
+            font-style:bold;
+        }
         /* Margen inferior del carrousel*/
         .carousel-container {
         margin-bottom: 30px;
-}
+    }
+        
     </style>
 </head>
 
@@ -56,7 +97,7 @@
     <!-- Navbar Superior--> 
     <nav class="navbar navbar-expand-lg navbar-light bg-light" style="font-size: 14px;">
         <div class="container">
-            <a class="navbar-brand" href="">BujoStore</a>
+            <a class="navbar-brand" style="font-size: 30px; font-style: bold;" href="">BujoStore</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -66,7 +107,7 @@
                 </ul>
                 <form class="d-flex ml-auto">
                     <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
-                    <button class="btn btn-outline-primary" type="submit">Buscar</button>
+                    <button class="btn btn-outline-secondary" type="submit">Buscar</button>
                 </form>
                 <ul class="navbar-nav">
                     <li class="nav-item">
@@ -79,10 +120,14 @@
         </div>
     </nav>
     <!-- Navbar Inferior -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top bg-custom">
         <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav mr-auto">
+                <ul class="navbar-nav navbar-nav-container">
                     <li class="nav-item">
                         <a class="nav-link text-white" href="../mainpage/index.html">Inicio</a>
                     </li>
@@ -108,10 +153,12 @@
                             <li><a class="dropdown-item" href="#">Banda Sonora Digital</a></li>
                         </ul>
                     </li>
+                </ul>
+                <ul class="navbar-nav ms-auto">
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown3" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
-                            Soporte
+                            Otros
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown3">
                             <li><a class="dropdown-item" href="#">Opción 1</a></li>
@@ -123,6 +170,7 @@
             </div>
         </div>
     </nav>
+    
 
 
             <!-- Contenido principal -->
