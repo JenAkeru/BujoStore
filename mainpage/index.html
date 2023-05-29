@@ -4,93 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Navbar y Sidebar Sticky</title>
+    <title>BujoStore</title>
     <link rel="stylesheet" href="../Resources/bootstrap-5.3.0-alpha3-dist/css/bootstrap.min.css">
-    <style>
-        /* Fuente */
-        @font-face {
-            font-family: 'Montserrat' ;
-            src: url(../Fonts/Montserrat-Italic-VariableFont_wght.ttf);
-        }
-        @font-face {
-            font-family: 'Jurasick' ;
-            src: url(../Fonts/Jurasick.ttf)
-        }
-        body {
-        font-family: "Jurasick", sans-serif; /* Aquí puedes especificar la fuente deseada */
-    }
-        /* Navbar */    
-        @media (max-width: 576px) {
-        .navbar {
-            font-size: 35px;
-            padding-top: 3px;
-            padding-bottom: 3px;
-        }
-    }
-    @media (min-width: 577px) and (max-width: 991px) {
-        .navbar {
-            font-size: 14px;
-            padding-top: 5px;
-            padding-bottom: 5px;
-        }
-    }
-        .navbar-nav-container {
-        display: flex;
-        align-items: center;
-    }
-        .ml-auto {
-        margin-left: auto;
-    }
-        .sticky-top {
-            position: sticky;
-            top: 0;
-            z-index: 1020;
-        }
-        .bg-custom {
-            background: linear-gradient(to right, #59228d, #f8be73);
-    }
-        .navbar-nav .nav-link {
-            font-size: 20px; /* Aquí puedes ajustar el tamaño de fuente deseado */
-    }
-        .carousel-caption h5 {
-            font-size: 38px; /* Aquí puedes especificar el tamaño de fuente deseado */
-    }
-        h2 {
-            font-size: 40px;
-        }
-        h3 {
-            font-size: 30px;
-        }
-        /* Asegura que el navbar siempre esté por encima del sidebar */
-        /* Navbar / Margenes */
-        .navbar-nav {
-        padding-left:10px;
-        padding-right:10px;
-        }
-        /* Estilo para la imagen de perfil */
-        .profile-image {
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            object-fit: cover;
-        }
-        /* Margen de elementos <h2 y h3*/
-        h2, h3 {
-        margin-bottom: 25px; 
-    }
-        /* Underlined para una linea de texto*/
-        .underlined {
-            text-decoration: underline; 
-        }
-        h3 {
-            font-style:bold;
-        }
-        /* Margen inferior del carrousel*/
-        .carousel-container {
-        margin-bottom: 30px;
-    }
-        
-    </style>
+    <link rel="stylesheet" href="../CSS/index.css">
 </head>
 
 <body>
@@ -106,8 +22,8 @@
                 <ul class="navbar-nav flex-grow-1">
                 </ul>
                 <form class="d-flex ml-auto">
-                    <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
-                    <button class="btn btn-outline-secondary" type="submit">Buscar</button>
+                    <input class="form-control me-2 custom-button" type="search" placeholder="Buscar" aria-label="Buscar">
+                    <button class="btn btn-outline-secondary custom-button" type="submit">Buscar</button>
                 </form>
                 <ul class="navbar-nav">
                     <li class="nav-item">
@@ -178,6 +94,7 @@
             <main class="col-md-auto ms-sm-auto px-md-4">
                 <div class="container">
                 <div class="row mt-1">
+                    <!-- Carousel -->
                     <div id="carouselExampleIndicators" class="carousel slide carousel-container" data-bs-ride="carousel">
                         <div class="carousel-indicators">
                             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -213,6 +130,7 @@
                             <span class="visually-hidden">Next</span>
                         </button>
                     </div>
+                    <!-- Cards -->
                     <div class="col text-center">
                         <h2 class ="underlined">Destacados</h2>
                         <h3>Vinilo</h3>
@@ -222,7 +140,8 @@
                                     <img src="../Images/Productos/R-8982774-1580241357-9509.png" class="card-img-top" alt="Producto 1">
                                     <div class="card-body">
                                         <h5 class="card-title custom-font">Sorceress</h5>
-                                        <p class="card-text custom-font">Opeth - Sorceress / Vinilo</p>
+                                        <p class="card-text custom-font">Opeth / Vinyl Album</p>
+                                        <button class="btn btn-dark custom-button">Ver más</button>
                                     </div>
                                 </div>
                             </div>
@@ -231,7 +150,8 @@
                                     <img src="../Images/Productos/711DDN4x3UL._UF1000,1000_QL80_.jpg" class="card-img-top" alt="Producto 2">
                                     <div class="card-body">
                                         <h5 class="card-title custom-font">The Sound of Perseverance</h5>
-                                        <p class="card-text custom-font">Death - The Sound of Perseverance / Vinilo</p>
+                                        <p class="card-text custom-font">Death / Vinyl Album</p>
+                                        <button class="btn btn-dark custom-button">Ver más</button>
                                     </div>
                                 </div>
                             </div>
@@ -239,8 +159,9 @@
                                 <div class="card">
                                     <img src="../Images/Productos/81OlHreGYZL._SL1200_.png" class="card-img-top" alt="Producto 3">
                                     <div class="card-body">
-                                        <h5 class="card-title custom-font">"Train of Thought"</h5>
-                                        <p class="card-text custom-font">Dream Theater - Train of Thought / Vinilo</p>
+                                        <h5 class="card-title custom-font">Train of Thought</h5>
+                                        <p class="card-text custom-font">Dream Theater / Vinyl album</p>
+                                        <button class="btn btn-dark custom-button">Ver más</button>
                                     </div>
                                 </div>
                             </div>
@@ -249,46 +170,92 @@
                                 <div class="row">
                                     <div class="col-lg-4 mb-4">
                                         <div class="card">
-                                            <img src="../Images/Productos/R-8982774-1580241357-9509.png" class="card-img-top" alt="Producto 1">
+                                            <img src="../Images/Productos/dissection.png" class="card-img-top" alt="Producto 4">
                                             <div class="card-body">
-                                                <h5 class="card-title custom-font">Sorceress</h5>
-                                                <p class="card-text custom-font">Opeth - Sorceress / Vinilo</p>
+                                                <h5 class="card-title custom-font">Storm of the Light's Bane</h5>
+                                                <p class="card-text custom-font">Dissection / CD Album</p>
+                                                <button class="btn btn-dark custom-button">Ver más</button>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-lg-4 mb-4">
                                         <div class="card">
-                                            <img src="../Images/Productos/711DDN4x3UL._UF1000,1000_QL80_.jpg" class="card-img-top" alt="Producto 2">
+                                            <img src="../Images/Productos/lykaia.png" class="card-img-top" alt="Producto 5">
                                             <div class="card-body">
-                                                <h5 class="card-title custom-font">The Sound of Perseverance</h5>
-                                                <p class="card-text custom-font">Death - The Sound of Perseverance / Vinilo</p>
+                                                <h5 class="card-title custom-font">Lykaia</h5>
+                                                <p class="card-text custom-font">Soen / CD Album</p>
+                                                <button class="btn btn-dark custom-button">Ver más</button>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-lg-4 mb-4">
                                         <div class="card">
-                                            <img src="../Images/Productos/81OlHreGYZL._SL1200_.png" class="card-img-top" alt="Producto 3">
+                                            <img src="../Images/Productos/nightfall.png" class="card-img-top" alt="Producto 6">
                                             <div class="card-body">
-                                                <h5 class="card-title custom-font">"Train of Thought"</h5>
-                                                <p class="card-text custom-font">Dream Theater - Train of Thought / Vinilo</p>
+                                                <h5 class="card-title custom-font">Nightfall</h5>
+                                                <p class="card-text custom-font">Candlemass / CD Album</p>
+                                                <button class="btn btn-dark custom-button">Ver más</button>
                                             </div>
-                            <!-- Repite el siguiente bloque para agregar más tarjetas -->
-                            <!-- <div class="col-lg-4 mb-4">
-                <div class="card">
-                <img src="producto4.jpg" class="card-img-top" alt="Producto 4">
-                <div class="card-body">
-                    <h5 class="card-title">Producto 4</h5>
-                    <p class="card-text">Descripción del Producto 4</p>
-                </div>
-                </div>
-            </div> -->
-                        </div>
+                                        </div>
+                                    </div>
+                                                <div class="col text-center">
+                                    <h3>LIVE DVD</h3>
+                                    <div class="row">
+                                    <div class="col-lg-4 mb-4">
+                                        <div class="card">
+                                            <img src="../Images/Productos/lamentations.png" class="card-img-top" alt="Producto 7">
+                                            <div class="card-body">
+                                                <h5 class="card-title custom-font">Lamentations</h5>
+                                                <p class="card-text custom-font">Opeth / Live DVD</p>
+                                                <button class="btn btn-dark custom-button">Ver más</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 mb-4">
+                                        <div class="card">
+                                            <img src="../Images/Productos/unleashed.png" class="card-img-top" alt="Producto 8">
+                                            <div class="card-body">
+                                                <h5 class="card-title custom-font">Unleashed in the East</h5>
+                                                <p class="card-text custom-font">Judas Priest / Live DVD</p>
+                                                <button class="btn btn-dark custom-button">Ver más</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 mb-4">
+                                        <div class="card">
+                                            <img src="../Images/Productos/dt.png" class="card-img-top" alt="Producto 9">
+                                            <div class="card-body">
+                                                <h5 class="card-title custom-font">Live Scenes from New York</h5>
+                                                <p class="card-text custom-font">Dream Theater / Live DVD</p>
+                                                <button class="btn btn-dark custom-button">Ver más</button>
+                                            </div>
+                                        </div>
+                                        
+                            </div>
                     </div>
                 </div>
+                <!-- Footer -->
+                <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+                    <div class="col-md-4 d-flex align-items-center custom-footer-font">
+                        <a href="/" class="mb-3 me-4 mb-md-0 text-muted text-decoration-none lh-1">
+                            <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
+                        </a>
+                        <div class="flex-grow-1">
+                            <a class="mb-3 mb-md-0 text-muted">© 2021-2023 BujoStore</a>
+                            <nav>
+                                <nav>
+                                    </nav>
+                                </nav>
+                                <a href="https://github.com/JenAkeru" class="text-muted ms-auto">Contactamé</a>
+                        </div>
+                    </div>
+                </footer>
             </main>
+        </div>
             </div>
         </div>
     </div>
+    
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/js/bootstrap.bundle.min.js"></script>
 </body>
