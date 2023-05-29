@@ -11,6 +11,9 @@
 body {
 font-family: "Jurasick", sans-serif; /* Aquí puedes especificar la fuente deseada */
 }
+.custom-footer-font {
+    font-family: "Franklin Gothic Medium", sans-serif;
+}
 /* Navbar */    
 
 .custom-button {
@@ -84,4 +87,16 @@ h3 {
 /* Margen inferior del carrousel*/
 .carousel-container {
 margin-bottom: 30px;
+}
+
+/* Footer */
+
+.custom-footer-font {
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .justify-content-md-end {
+        justify-content: flex-end !important;
+    }
 }
