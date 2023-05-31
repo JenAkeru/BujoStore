@@ -2,11 +2,11 @@
 /* Fuente */
 @font-face {
     font-family: 'Montserrat' ;
-    src: url(../Fonts/Montserrat-Italic-VariableFont_wght.ttf);
+    src: url(../views/fonts/Montserrat-Italic-VariableFont_wght.ttf);
 }
 @font-face {
     font-family: 'Jurasick' ;
-    src: url(../Fonts/Jurasick.ttf)
+    src: url(../views/fonts/Jurasick.ttf)
 }
 body {
 font-family: "Jurasick", sans-serif; /* Aquí puedes especificar la fuente deseada */
