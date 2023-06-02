@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <!-- Navbar Superior--> 
+    <!-- Navbar Superior-->
     <nav class="navbar navbar-expand-lg navbar-light bg-light" style="font-size: 14px;">
         <div class="container">
             <a class="navbar-brand" style="font-size: 30px; font-style: bold;" href="">BujoStore</a>
@@ -23,13 +23,14 @@
                 <ul class="navbar-nav flex-grow-1">
                 </ul>
                 <form class="d-flex ml-auto">
-                    <input class="form-control me-2 custom-button d-inline" type="search" placeholder="Buscar" aria-label="Buscar">
+                    <input class="form-control me-2 custom-button d-inline" type="search" placeholder="Buscar"
+                        aria-label="Buscar">
                     <button class="btn btn-outline-secondary custom-button d-inline" type="submit">Buscar</button>
                 </form>
                 <ul class="navbar-nav">
                     <li class="nav-item">
                         <a class="nav-link" href="#">
-                            <img src="../views/images/pfp/user.png" alt="Perfil" class="profile-image d-inline">
+                            <img src="../../views/images/pfp/user.png" alt="Perfil" class="profile-image d-inline">
                         </a>
                     </li>
                 </ul>
@@ -97,80 +98,84 @@
             </div>
         </div>
     </nav>
-    
 
 
-            <!-- Contenido principal -->
-            <div class="mt-4">
-            <main class="col-md-auto ms-sm-auto px-md-4">
-                <div class="container">
+
+    <!-- Contenido principal -->
+    <div class="mt-4">
+        <main class="col-md-auto ms-sm-auto px-md-4">
+            <div class="container">
                 <div class="row mt-1">
                     <div class="container">
                         <h1>Crear nuevo producto</h1>
                         <form>
                             <div class="mb-3">
-                            <label for="imagen">Imagen:</label>
-                            <input type="file" class="form-control" id="imagen" accept="image/*" onchange="previewImage(event)">
-                            <img id="preview" src="#" alt="Vista previa de la imagen" style="max-width: 200px; display: none;">
+                                <label for="imagen">Imagen:</label>
+                                <input type="file" class="form-control" id="imagen" accept="image/*"
+                                    onchange="previewImage(event)">
+                                <img id="preview" src="#" alt="Vista previa de la imagen"
+                                    style="max-width: 200px; display: none;">
                             </div>
                             <div class="mb-3">
-                            <label for="titulo">Título:</label>
-                            <input type="text" class="form-control" id="titulo" required>
+                                <label for="titulo">Título:</label>
+                                <input type="text" class="form-control" id="titulo" required>
                             </div>
                             <div class="mb-3">
-                            <label for="descripcion">Descripción:</label>
-                            <textarea class="form-control" id="descripcion" rows="3" required></textarea>
+                                <label for="descripcion">Descripción:</label>
+                                <textarea class="form-control" id="descripcion" rows="3" required></textarea>
                             </div>
                             <div class="mb-3">
-                            <label for="album">Álbum:</label>
-                            <input type="text" class="form-control" id="album" required>
+                                <label for="album">Álbum:</label>
+                                <input type="text" class="form-control" id="album" required>
                             </div>
                             <div class="mb-3">
-                            <label for="stock">Stock:</label>
-                            <input type="number" class="form-control" id="stock" required>
+                                <label for="stock">Stock:</label>
+                                <input type="number" class="form-control" id="stock" required>
                             </div>
                             <div class="mb-3">
-                            <label for="precio">Precio:</label>
-                            <input type="number" class="form-control" id="precio" required>
+                                <label for="precio">Precio:</label>
+                                <input type="number" class="form-control" id="precio" required>
                             </div>
                             <button type="submit" class="btn btn-primary">Guardar</button>
                         </form>
                     </div>
-                    
+
                     <script>
-                    function previewImage(event) {
-                        var reader = new FileReader();
-                        reader.onload = function() {
-                        var preview = document.getElementById('preview');
-                        preview.src = reader.result;
-                        preview.style.display = 'block';
+                        function previewImage(event) {
+                            var reader = new FileReader();
+                            reader.onload = function () {
+                                var preview = document.getElementById('preview');
+                                preview.src = reader.result;
+                                preview.style.display = 'block';
+                            }
+                            reader.readAsDataURL(event.target.files[0]);
                         }
-                        reader.readAsDataURL(event.target.files[0]);
-                    }
                     </script>
                 </div>
                 <!-- Footer -->
                 <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
                     <div class="col-md-4 d-flex align-items-center custom-footer-font">
                         <a href="/" class="mb-3 me-4 mb-md-0 text-muted text-decoration-none lh-1">
-                            <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
+                            <svg class="bi" width="30" height="24">
+                                <use xlink:href="#bootstrap"></use>
+                            </svg>
                         </a>
                         <div class="flex-grow-1">
                             <a class="mb-3 mb-md-0 text-muted">© 2021-2023 BujoStore</a>
                             <nav>
                                 <nav>
-                                    </nav>
                                 </nav>
-                                <a href="https://github.com/JenAkeru" class="text-muted ms-auto">Contactanos</a>
+                            </nav>
+                            <a href="https://github.com/JenAkeru" class="text-muted ms-auto">Contactanos</a>
                         </div>
                     </div>
                 </footer>
-            </main>
-        </div>
-            </div>
-        </div>
+        </main>
     </div>
-    
+    </div>
+    </div>
+    </div>
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/js/bootstrap.bundle.min.js"></script>
 </body>
