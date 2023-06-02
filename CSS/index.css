@@ -1,20 +1,24 @@
-
 /* Fuente */
 @font-face {
-    font-family: 'Montserrat' ;
+    font-family: 'Montserrat';
     src: url(../views/fonts/Montserrat-Italic-VariableFont_wght.ttf);
 }
+
 @font-face {
-    font-family: 'Jurasick' ;
+    font-family: 'Jurasick';
     src: url(../views/fonts/Jurasick.ttf)
 }
+
 body {
-font-family: "Jurasick", sans-serif; /* Aquí puedes especificar la fuente deseada */
+    font-family: "Jurasick", sans-serif;
+    /* Aquí puedes especificar la fuente deseada */
 }
+
 .custom-footer-font {
     font-family: "Franklin Gothic Medium", sans-serif;
 }
-/* Navbar */    
+
+/* Navbar */
 
 .custom-button {
     font-family: "Franklin Gothic Medium", sans-serif;
@@ -24,53 +28,67 @@ font-family: "Jurasick", sans-serif; /* Aquí puedes especificar la fuente desea
     font-family: "Jurasick", sans-serif;
     font-size: 19px;
 }
+
 @media (max-width: 576px) {
-.navbar {
-    font-size: 35px;
-    padding-top: 3px;
-    padding-bottom: 3px;
+    .navbar {
+        font-size: 35px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+    }
 }
-}
+
 @media (min-width: 577px) and (max-width: 991px) {
-.navbar {
-    font-size: 14px;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    .navbar {
+        font-size: 14px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
 }
-}
+
 .navbar-nav-container {
-display: flex;
-align-items: center;
+    display: flex;
+    align-items: center;
 }
+
 .ml-auto {
-margin-left: auto;
+    margin-left: auto;
 }
+
 .sticky-top {
     position: sticky;
     top: 0;
     z-index: 1020;
 }
+
 .bg-custom {
     background: linear-gradient(to right, #59228d, #f8be73);
 }
+
 .navbar-nav .nav-link {
-    font-size: 20px; /* Aquí puedes ajustar el tamaño de fuente deseado */
+    font-size: 20px;
+    /* Aquí puedes ajustar el tamaño de fuente deseado */
 }
+
 .carousel-caption h5 {
-    font-size: 38px; /* Aquí puedes especificar el tamaño de fuente deseado */
+    font-size: 38px;
+    /* Aquí puedes especificar el tamaño de fuente deseado */
 }
+
 h2 {
     font-size: 40px;
 }
+
 h3 {
     font-size: 30px;
 }
+
 /* Asegura que el navbar siempre esté por encima del sidebar */
 /* Navbar / Margenes */
 .navbar-nav {
-padding-left:10px;
-padding-right:10px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
+
 /* Estilo para la imagen de perfil */
 .profile-image {
     width: 30px;
@@ -78,20 +96,25 @@ padding-right:10px;
     border-radius: 50%;
     object-fit: cover;
 }
+
 /* Margen de elementos <h2 y h3*/
-h2, h3 {
-margin-bottom: 25px; 
+h2,
+h3 {
+    margin-bottom: 25px;
 }
+
 /* Underlined para una linea de texto*/
 .underlined {
-    text-decoration: underline; 
+    text-decoration: underline;
 }
+
 h3 {
-    font-style:bold;
+    font-style: bold;
 }
+
 /* Margen inferior del carrousel*/
 .carousel-container {
-margin-bottom: 30px;
+    margin-bottom: 30px;
 }
 
 /* Footer */
@@ -109,6 +132,6 @@ margin-bottom: 30px;
 /* Carousel textos sin estilo */
 
 .link-no-style {
-        text-decoration: none !important;
-        color: rgb(255, 255, 255) !important;
-    }
+    text-decoration: none !important;
+    color: rgb(255, 255, 255) !important;
+}
